@@ -141,6 +141,10 @@ const HomePage: React.FC = () => {
     pdfDoc.save("attendance_report.pdf");
   };
 
+  const handleStudentList = () => {
+    navigate("/students");
+  };
+
   return (
     <div className={`relative flex flex-col p-4 h-screen ${theme === "dark" ? "bg-[#0a0a0a] text-white" : "bg-[#ffffff] text-black"}`}>
       {/* Logout Button */}
@@ -171,6 +175,9 @@ const HomePage: React.FC = () => {
         </Button>
         <Button variant="outline" className={actionButtonClass} onClick={handleDownloadPDF}>
           Download
+        </Button>
+        <Button variant="outline" className={actionButtonClass} onClick={handleStudentList}>
+          View All Students
         </Button>
         <ReportDialog attendanceData={attendanceData} />
       </div>

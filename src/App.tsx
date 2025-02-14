@@ -8,6 +8,8 @@ import HomePage from "./components/pages/HomePage";
 import ProfilePage from "./components/pages/ProfilePage";
 import NotificationsPage from "./components/pages/NotificationsPage";
 import StudentPage from "./components/pages/StudentPage";
+import StudentList from "./components/pages/StudentList";
+import StudentAttendance from "./components/pages/StudentAttendance";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
               <Route path="/profile" element={<ProfilePage/>} />
               <Route path="/notifications" element={<NotificationsPage />} />
               <Route path="/student/:studentId" element={<StudentPage />} />
+              <Route path="/students" element={<StudentList />} />
+              <Route path="/student/:studentID/attendance" element={<StudentAttendance />} />
             </Routes>
           </main>
         </div>
